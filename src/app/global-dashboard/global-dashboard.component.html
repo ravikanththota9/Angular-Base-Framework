@@ -1,0 +1,370 @@
+<div class="container-fluid">
+
+  <!-- Content Row -->
+  <div class="row">
+
+      
+      <div class="col-xl-3 col-md-6 mb-2">
+          <div class="card bg-info shadow h-100 py-2">
+              <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                          <div class="small text-white text-uppercase mb-1">Active projects
+                          </div>
+                          <div class="row no-gutters align-items-center">
+                              <div class="col-auto">
+                                  <div class="h5 mb-0 mr-3 text-white">1800</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <i class="fas fa-briefcase fa-2x text-white"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      
+      <div class="col-xl-3 col-md-6 mb-2">
+          <div class="card bg-purple shadow h-100 py-2">
+              <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                          <div class="small text-white text-uppercase mb-1">On track
+                          </div>
+                          <div class="row no-gutters align-items-center">
+                              <div class="col-auto">
+                                  <div class="h5 mb-0 mr-3 text-white">240</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <i class="fas fa-calendar-alt fa-2x text-white"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      
+      <div class="col-xl-3 col-md-6 mb-2">
+          <div class="card badge-success shadow h-100 py-2">
+              <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                          <div class="small text-white text-uppercase mb-1">In Risk
+                          </div>
+                          <div class="row no-gutters align-items-center">
+                              <div class="col-auto">
+                                  <div class="h5 mb-0 mr-3 text-white">50</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <i class="fas fa-exclamation-triangle fa-2x text-white"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Pending Requests Card Example -->
+      <div class="col-xl-3 col-md-6 mb-2">
+          <div class="card bg-pink shadow h-100 py-2">
+              <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                      <div class="col mr-2">
+                          <div class="small text-white text-uppercase mb-1">Contractors
+                          </div>
+                          <div class="row no-gutters align-items-center">
+                              <div class="col-auto">
+                                  <div class="h5 mb-0 mr-3 text-white">3560</div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <i class="fas fa-users fa-2x text-white"></i>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <div class="row">
+    
+    <div class="col-lg-6">
+      <div class="card shadow mb-2">
+        <!-- Card Header - Accordion -->
+        <a href="#projectProgress" class="d-block card-header py-2" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="projectProgress">
+          <h6 class="m-0 font-weight-bold text-primary">Projects Progress</h6>
+        </a>
+        <!-- Card Content - Collapse -->
+        <div class="collapse show" id="projectProgress">
+          <div class="card-body widget">
+            <canvas
+                baseChart
+                [chartType]="'bar'"
+                [datasets]="chartData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [legend]="false">
+            </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card shadow mb-2">
+        <!-- Card Header - Accordion -->
+        <a href="#projectProgress" class="d-block card-header py-2" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="projectProgress">
+          <h6 class="m-0 font-weight-bold text-primary">Projects Financials</h6>
+        </a>
+        <!-- Card Content - Collapse -->
+        <div class="collapse show" id="projectProgress">
+          <div class="card-body widget">
+            <canvas
+                baseChart
+                [chartType]="'bar'"
+                [datasets]="chartData"
+                [labels]="chartLabels"
+                [options]="chartOptions"
+                [legend]="false">
+            </canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="clearfix px-5">
+      <div id="project-slider" class="project-slider carousel slide" data-ride="carousel">
+          <div class="carousel-inner row w-100 mx-auto">
+
+            <div class="carousel-item col-md-4 active">
+                <div class="bg-white p-4 border mb-2 text-dark position-relative">
+                  <h5 class="mb-0"><span class="h6">PR9989J-HDG-777GAK</span></h5>
+                  <h5><span class="h6">A Sample job</span></h5>
+                  <h6 class="text-xs">Novato, California</h6>
+                  <div class="d-block mb-2">
+                      <span class="badge badge-success mr-2">On track</span>
+                      <span class="badge badge-warning mr-2">In progress</span>
+                      <span class="badge badge-danger mr-2">Risk</span>
+                  </div>
+                  <h5><span class="h6">Estimated Budget: </span>$3000</h5>
+                  <hr>
+                  <div class="row">
+                    <div class="col-6">
+                      <span class="d-block small pb-1">Project Manager</span>
+                      <span class="d-block h6">Srini</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="d-block small  pb-1">Customer</span>
+                        <span class="d-block h6">Tom</span>
+                      </div>
+                  </div>
+                  <div class="row pt-2">
+                      <div class="col-6">
+                        <span class="d-block small pb-1">Project Start Date</span>
+                        <span class="d-block h6">20 May 2020</span>
+                      </div>
+                      <div class="col-6">
+                        <span class="d-block small pb-1">Project End Date</span>
+                        <span class="d-block h6">03 Jan 2021</span>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-4">
+                <div class="bg-white p-4 border mb-2 text-dark position-relative">
+                  <h5 class="mb-0"><span class="h6">PR9989J-HDG-777GAK</span></h5>
+                  <h5><span class="h6">A Sample job</span></h5>
+                  <h6 class="text-xs">Novato, California</h6>
+                  <div class="d-block mb-2">
+                      <span class="badge badge-success mr-2">On track</span>
+                      <span class="badge badge-warning mr-2">In progress</span>
+                      <span class="badge badge-danger mr-2">Risk</span>
+                  </div>
+                  <h5><span class="h6">Estimated Budget: </span>$3000</h5>
+                  <hr>
+                  <div class="row">
+                    <div class="col-6">
+                      <span class="d-block small pb-1">Project Manager</span>
+                      <span class="d-block h6">Srini</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="d-block small  pb-1">Customer</span>
+                        <span class="d-block h6">Tom</span>
+                      </div>
+                  </div>
+                  <div class="row pt-2">
+                      <div class="col-6">
+                        <span class="d-block small pb-1">Project Start Date</span>
+                        <span class="d-block h6">20 May 2020</span>
+                      </div>
+                      <div class="col-6">
+                        <span class="d-block small pb-1">Project End Date</span>
+                        <span class="d-block h6">03 Jan 2021</span>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-4">
+                <div class="bg-white p-4 border mb-2 text-dark position-relative">
+                  <h5 class="mb-0"><span class="h6">PR9989J-HDG-777GAK</span></h5>
+                  <h5><span class="h6">A Sample job</span></h5>
+                  <h6 class="text-xs">Novato, California</h6>
+                  <div class="d-block mb-2">
+                      <span class="badge badge-success mr-2">On track</span>
+                      <span class="badge badge-warning mr-2">In progress</span>
+                      <span class="badge badge-danger mr-2">Risk</span>
+                  </div>
+                  <h5><span class="h6">Estimated Budget: </span>$3000</h5>
+                  <hr>
+                  <div class="row">
+                    <div class="col-6">
+                      <span class="d-block small pb-1">Project Manager</span>
+                      <span class="d-block h6">Srini</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="d-block small  pb-1">Customer</span>
+                        <span class="d-block h6">Tom</span>
+                      </div>
+                  </div>
+                  <div class="row pt-2">
+                      <div class="col-6">
+                        <span class="d-block small pb-1">Project Start Date</span>
+                        <span class="d-block h6">20 May 2020</span>
+                      </div>
+                      <div class="col-6">
+                        <span class="d-block small pb-1">Project End Date</span>
+                        <span class="d-block h6">03 Jan 2021</span>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-4">
+                <div class="bg-white p-4 border mb-2 text-dark position-relative">
+                  <h5 class="mb-0"><span class="h6">PR9989J-HDG-777GAK</span></h5>
+                  <h5><span class="h6">A Sample job</span></h5>
+                  <h6 class="text-xs">Novato, California</h6>
+                  <div class="d-block mb-2">
+                      <span class="badge badge-success mr-2">On track</span>
+                      <span class="badge badge-warning mr-2">In progress</span>
+                      <span class="badge badge-danger mr-2">Risk</span>
+                  </div>
+                  <h5><span class="h6">Estimated Budget: </span>$3000</h5>
+                  <hr>
+                  <div class="row">
+                    <div class="col-6">
+                      <span class="d-block small pb-1">Project Manager</span>
+                      <span class="d-block h6">Srini</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="d-block small  pb-1">Customer</span>
+                        <span class="d-block h6">Tom</span>
+                      </div>
+                  </div>
+                  <div class="row pt-2">
+                      <div class="col-6">
+                        <span class="d-block small pb-1">Project Start Date</span>
+                        <span class="d-block h6">20 May 2020</span>
+                      </div>
+                      <div class="col-6">
+                        <span class="d-block small pb-1">Project End Date</span>
+                        <span class="d-block h6">03 Jan 2021</span>
+                      </div>
+                  </div>
+                </div>
+            </div>
+            <div class="carousel-item col-md-4">
+                <div class="bg-white p-4 border mb-2 text-dark position-relative">
+                  <h5 class="mb-0"><span class="h6">PR9989J-HDG-777GAK</span></h5>
+                  <h5><span class="h6">A Sample job</span></h5>
+                  <h6 class="text-xs">Novato, California</h6>
+                  <div class="d-block mb-2">
+                      <span class="badge badge-success mr-2">On track</span>
+                      <span class="badge badge-warning mr-2">In progress</span>
+                      <span class="badge badge-danger mr-2">Risk</span>
+                  </div>
+                  <h5><span class="h6">Estimated Budget: </span>$3000</h5>
+                  <hr>
+                  <div class="row">
+                    <div class="col-6">
+                      <span class="d-block small pb-1">Project Manager</span>
+                      <span class="d-block h6">Srini</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="d-block small  pb-1">Customer</span>
+                        <span class="d-block h6">Tom</span>
+                      </div>
+                  </div>
+                  <div class="row pt-2">
+                      <div class="col-6">
+                        <span class="d-block small pb-1">Project Start Date</span>
+                        <span class="d-block h6">20 May 2020</span>
+                      </div>
+                      <div class="col-6">
+                        <span class="d-block small pb-1">Project End Date</span>
+                        <span class="d-block h6">03 Jan 2021</span>
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#project-slider" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon text-dark" aria-hidden="true"><i class="fas fa-chevron-circle-left"></i></span>
+          </a>
+          <a class="carousel-control-next" href="#project-slider" role="button" data-slide="next">
+            <span class="carousel-control-next-icon text-dark" aria-hidden="true"><i class="fas fa-chevron-circle-right"></i></span>
+          </a>
+        </div>
+
+  </div>
+
+  <!-- Content Row -->
+  <div class="row">
+    <div class="col-xl-7">
+        <div class="card shadow mb-2">
+            <!-- Card Header - Accordion -->
+            <a href="#map" class="d-block card-header py-2" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="map">
+                <h6 class="m-0 font-weight-bold text-primary">Map</h6>
+            </a>
+            <!-- Card Content - Collapse -->
+            <div class="collapse show" id="map">
+                <div class="card-body widget p-0">
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.294899169216!2d-74.01454923473257!3d40.71152417933199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19881b83fb%3A0x979b0a4fe0492ce6!2sWorld%20Trade%20Center%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1589535183653!5m2!1sen!2sin"
+                        width="100%" height="343" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-5">
+      <div class="card shadow mb-2">
+          <!-- Card Header - Accordion -->
+          <a href="#projectReport" class="d-block card-header py-2" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="projectReport">
+              <h6 class="m-0 font-weight-bold text-primary">Project Report</h6>
+          </a>
+          <!-- Card Content - Collapse -->
+          <div class="collapse show" id="projectReport">
+              <div class="card-body widget">
+                <ag-grid-angular
+                style="width: 100%; height: 330px;"
+                class="ag-theme-alpine"
+                [rowData]="rowData"
+                [columnDefs]="columnDefs"
+                >
+            </ag-grid-angular>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>

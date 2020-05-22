@@ -1,0 +1,389 @@
+<div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="row mb-4">
+            <div class="col-md-6 d-flex flex-column flex-lg-row project-select align-items-center">
+                  <h3 class="h4 mb-0 text-gray-800">Select Project</h3>
+                  <div class="pl-4 min-width-300">
+                      <ng-select [items]="projects"
+                          bindLabel="name"
+                          placeholder="Select project"
+                          [(ngModel)]="selectedProject">
+                      </ng-select>
+                  </div>
+            </div>
+            <div class="pt-3 pt-lg-0 col-md-6 d-flex align-items-center justify-content-between">
+              <div>
+                  <p class="small font-weight-bold mb-1 text-dark">Project ID: PR-2233-SR</p>
+                  <p class="small font-weight-bold mb-1 text-dark">Project Location: Novato, SanFransisco, CA</p>
+                  <p class="small font-weight-bold mb-1 text-dark">Project Manager: Tom Hanks</p>
+              </div>
+              <!-- here replace the number of class from 1 to 100 to get the chart percentage  -->
+              <div class="progress-circle progress-63"><span>63</span></div>
+            </div>
+            
+        </div>
+      
+        <!-- Content Row -->
+        <div class="row">
+      
+            
+            <div class="col-xl-3 col-md-6 mb-2">
+                <div class="card bg-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="small text-white text-uppercase mb-1">No.of Contractors
+                                </div>
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <div class="h5 mb-0 mr-3 text-white">1800</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-users fa-2x text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            
+            <div class="col-xl-3 col-md-6 mb-2">
+                <div class="card bg-purple shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="small text-white text-uppercase mb-1">Project Days
+                                </div>
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <div class="h5 mb-0 mr-3 text-white">24 Days</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-calendar-alt fa-2x text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            
+            <div class="col-xl-3 col-md-6 mb-2">
+                <div class="card bg-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="small text-white text-uppercase mb-1">Project Budget
+                                </div>
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <div class="h5 mb-0 mr-3 text-white">$5650</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-dollar-sign fa-2x text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      
+            
+            <div class="col-xl-3 col-md-6 mb-2">
+                <div class="card bg-pink shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="small text-white text-uppercase mb-1">Remaining Budget
+                                </div>
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <div class="h5 mb-0 mr-3 text-white">$3560</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-hand-holding-usd fa-2x text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="row">
+      
+            <div class="col-lg-6">
+              
+                  <div class="pt-3 pr-5 pl-5">
+                      <canvas
+                          baseChart
+                          [chartType]="'doughnut'"
+                          [datasets]="chartData"
+                          [labels]="chartLabels"
+                          [options]="chartOptions"
+                          [legend]="false">
+                      </canvas>
+                  </div>
+                  <div class="row mx-0">
+                      <div class="col-12 bg-info text-center text-white pt-3 pb-1 rounded position-relative">
+                          <h5>Project: PR4567</h5>
+                          <h5>Start Date: 20 May 2020</h5>
+                          <h5>End Date: 20 June 2020</h5>
+                          <h5>Novato, California</h5>
+                          <div class="position-absolute total-progress-text text-dark">
+                              <h5 class="font-weight-bold">Total Progress</h5>
+                              <h5 class="font-weight-bold">70%</h5>
+                          </div>
+                      </div>
+                  </div>
+            </div>
+      
+            <div class="col-lg-6">
+                  <div class="pt-3">
+                      <h2 class="h6 mb-3 text-dark text-center">Project Phases</h2>
+                      <div class="max-height-for-scroll">
+                          <h4 class="small text-dark">Phase 1 <span class="float-right">100%</span></h4>
+                          <div class="progress mb-4">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <h4 class="small text-dark">Phase 2 <span class="float-right">100%</span></h4>
+                          <div class="progress mb-4">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <h4 class="small text-dark">Phase 3 <span class="float-right">35%</span></h4>
+                          <div class="progress mb-4">
+                              <div class="progress-bar bg-danger" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <h4 class="small text-dark">Phase 4 <span class="float-right">0%</span></h4>
+                          <div class="progress mb-4">
+                              <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                      </div>
+                      <div class="row bg-gray-medium rounded p-3 mt-4">
+                          <div class="col-4 d-flex align-items-center justify-content-center">
+                              <div class="d-block rounded px-3 py-2 bg-purple text-white">
+                                  45
+                              </div>
+                              <div class="ml-3 small text-white">Total Tasks</div>
+                          </div>
+                          <div class="col-4 d-flex align-items-center justify-content-center">
+                              <div class="d-block rounded px-3 py-2 bg-pink text-white">
+                                  45
+                              </div>
+                              <div class="ml-3 small text-white">Pending Tasks</div>
+                          </div>
+                          <div class="col-4 d-flex align-items-center justify-content-center">
+                              <div class="d-block rounded px-3 py-2 bg-info text-white">
+                                  45
+                              </div>
+                              <div class="ml-3 small text-white">Completed Tasks</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+        </div>
+      
+      
+        <div class="row pt-3">
+      
+              <div class="col-12">
+                <div class="card shadow mb-2">
+                    <!-- Card Header - Accordion -->
+                    <a href="#projectList" class="d-block card-header py-2" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="projectList">
+                      <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                    </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="projectList">
+                      <div class="card-body widget width-adjusted-ag-grid">
+                          <nav>
+                              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                  <a class="nav-item nav-link active" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab" aria-controls="nav-all" aria-selected="true">All</a>
+                                  <a class="nav-item nav-link" id="nav-new-tab" data-toggle="tab" href="#nav-new" role="tab" aria-controls="nav-new" aria-selected="false">New</a>
+                                  <a class="nav-item nav-link" id="nav-completed-tab" data-toggle="tab" href="#nav-completed" role="tab" aria-controls="nav-completed" aria-selected="false">Completed</a>
+                              </div>
+                          </nav>
+                          <div class="tab-content" id="nav-tabContent">
+                              <div class="tab-pane fade show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+                                      <ag-grid-angular
+                                      style="width: 100%; height: 275px;"
+                                      class="ag-theme-alpine"
+                                      [rowData]="rowData"
+                                      [columnDefs]="columnDefs"
+                                      >
+                                  </ag-grid-angular>
+                              </div>
+                              <div class="tab-pane fade" id="nav-new" role="tabpanel" aria-labelledby="nav-new-tab">...</div>
+                              <div class="tab-pane fade" id="nav-completed" role="tabpanel" aria-labelledby="nav-completed-tab">...</div>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        
+          </div>
+      
+        <!-- Content Row -->
+        <div class="row">
+            <div class="col-xl-8">
+      
+                  <div class="card shadow mb-2">
+                          <!-- Card Header - Accordion -->
+                          <a href="#map" class="d-block card-header py-2" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="map">
+                              <h6 class="m-0 font-weight-bold text-primary">Map</h6>
+                          </a>
+                          <!-- Card Content - Collapse -->
+                          <div class="collapse show" id="map">
+                              <div class="card-body widget p-0">
+                                      <iframe
+                                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.294899169216!2d-74.01454923473257!3d40.71152417933199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a19881b83fb%3A0x979b0a4fe0492ce6!2sWorld%20Trade%20Center%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1589535183653!5m2!1sen!2sin"
+                                      width="100%" height="343" frameborder="0" style="border:0;" allowfullscreen=""
+                                      aria-hidden="false" tabindex="0"></iframe>
+                              </div>
+                          </div>
+                      </div>
+      
+            </div>
+      
+            <div class="col-xl-4">
+      
+                  <div class="card shadow mb-2">
+                      <!-- Card Header - Accordion -->
+                      <a href="#projectReport" class="d-block card-header py-2" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="projectReport">
+                          <h6 class="m-0 font-weight-bold text-primary">Project Report</h6>
+                      </a>
+                      <!-- Card Content - Collapse -->
+                      <div class="collapse show" id="projectReport">
+                          <div class="card-body widget">
+                              <div class="dropdown-item d-flex align-items-center">
+                                  <div class="dropdown-list-image text-center mr-3">
+                                      <i _ngcontent-gqo-c78="" class="fas fa-calendar-alt fa-2x text-primary"></i>
+                                      <div class="status-indicator bg-success"></div>
+                                  </div>
+                                  <div>
+                                      <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
+                                      <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                  </div>
+                                  <div class="align-self-start">
+                                      <a href="">View</a>
+                                  </div>
+                              </div>
+                              <div class="dropdown-item d-flex align-items-center">
+                                  <div class="dropdown-list-image text-center mr-3">
+                                      <i _ngcontent-gqo-c78="" class="fas fa-calendar-alt fa-2x text-primary"></i>
+                                      <div class="status-indicator"></div>
+                                  </div>
+                                  <div>
+                                      <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
+                                      <div class="small text-gray-500">Jae Chun · 1d</div>
+                                  </div>
+                                  <div class="align-self-start">
+                                      <a href="">View</a>
+                                  </div>
+                              </div>
+                              <div class="dropdown-item d-flex align-items-center">
+                                  <div class="dropdown-list-image text-center mr-3">
+                                      <i _ngcontent-gqo-c78="" class="fas fa-calendar-alt fa-2x text-primary"></i>
+                                      <div class="status-indicator bg-warning"></div>
+                                  </div>
+                                  <div>
+                                      <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
+                                      <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                  </div>
+                                  <div class="align-self-start">
+                                      <a href="">View</a>
+                                  </div>
+                              </div>
+                              <div class="dropdown-item d-flex align-items-center">
+                                  <div class="dropdown-list-image text-center mr-3">
+                                      <i _ngcontent-gqo-c78="" class="fas fa-calendar-alt fa-2x text-primary"></i>
+                                      <div class="status-indicator bg-success"></div>
+                                  </div>
+                                  <div>
+                                      <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                                      <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                  </div>
+                                  <div class="align-self-start">
+                                      <a href="">View</a>
+                                  </div>
+                              </div>
+                              <div class="dropdown-item d-flex align-items-center">
+                                  <div class="dropdown-list-image text-center mr-3">
+                                      <i _ngcontent-gqo-c78="" class="fas fa-calendar-alt fa-2x text-primary"></i>
+                                      <div class="status-indicator bg-success"></div>
+                                  </div>
+                                  <div>
+                                      <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                                      <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                  </div>
+                                  <div class="align-self-start">
+                                      <a href="">View</a>
+                                  </div>
+                              </div>
+                              <div class="dropdown-item d-flex align-items-center">
+                                  <div class="dropdown-list-image text-center mr-3">
+                                      <i _ngcontent-gqo-c78="" class="fas fa-calendar-alt fa-2x text-primary"></i>
+                                      <div class="status-indicator bg-success"></div>
+                                  </div>
+                                  <div>
+                                      <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                                      <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                  </div>
+                                  <div class="align-self-start">
+                                      <a href="">View</a>
+                                  </div>
+                              </div>
+                              <div class="dropdown-item d-flex align-items-center">
+                                  <div class="dropdown-list-image text-center mr-3">
+                                      <i _ngcontent-gqo-c78="" class="fas fa-calendar-alt fa-2x text-primary"></i>
+                                      <div class="status-indicator bg-success"></div>
+                                  </div>
+                                  <div>
+                                      <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                                      <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                  </div>
+                                  <div class="align-self-start">
+                                      <a href="">View</a>
+                                  </div>
+                              </div>
+                              <div class="dropdown-item d-flex align-items-center">
+                                  <div class="dropdown-list-image text-center mr-3">
+                                      <i _ngcontent-gqo-c78="" class="fas fa-calendar-alt fa-2x text-primary"></i>
+                                      <div class="status-indicator bg-success"></div>
+                                  </div>
+                                  <div>
+                                      <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                                      <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                  </div>
+                                  <div class="align-self-start">
+                                      <a href="">View</a>
+                                  </div>
+                              </div>
+                              <div class="dropdown-item d-flex align-items-center">
+                                  <div class="dropdown-list-image text-center mr-3">
+                                      <i _ngcontent-gqo-c78="" class="fas fa-calendar-alt fa-2x text-primary"></i>
+                                      <div class="status-indicator bg-success"></div>
+                                  </div>
+                                  <div>
+                                      <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                                      <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                  </div>
+                                  <div class="align-self-start">
+                                      <a href="">View</a>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+        
+              </div>
+      
+        </div>
+      
+      </div>

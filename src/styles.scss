@@ -1,0 +1,234 @@
+// Import Custom Variables (Overrides Default Bootstrap Variables)
+//#region Material Theme
+// @import '~@angular/material/theming';
+
+@import "scss/variables.scss";
+
+// Import Bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// Import Custom Mixins and Components
+@import "scss/mixins.scss";
+@import "scss/global.scss";
+@import "scss/utilities.scss";
+
+// Import Custom fonts - Font Awesome and Google fonts
+@import "@fortawesome/fontawesome-free/css/all.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+// Custom Components
+@import "scss/dropdowns.scss";
+@import "scss/navs.scss";
+@import "scss/buttons.scss";
+@import "scss/cards.scss";
+@import "scss/charts.scss";
+@import "scss/login.scss";
+@import "scss/error.scss";
+@import "scss/footer.scss";
+@import "scss/circle-progress.scss";
+
+// NG Select
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+// AG Grid
+@import "../node_modules/ag-grid-community/src/styles/ag-grid.scss";
+@import "../node_modules/ag-grid-community/src/styles/ag-theme-alpine/sass/ag-theme-alpine-mixin.scss";
+
+.ag-theme-alpine {
+    @include ag-theme-alpine();
+}
+
+
+// re-usable styles
+
+.z-index-1 {
+    z-index: 1;
+}
+
+.min-width-300 {
+    min-width: 300px;
+}
+
+// resets
+
+@media (max-width: 767px) {
+    .navbar-default {
+        position: fixed;
+        right: 0;
+        left: 0;   
+        top: 0;
+    }      
+}
+
+h6 {
+    font-size: .85rem;
+}
+
+.card-body {
+    &.widget {
+        max-height: 350px;
+        min-height: 350px;
+        overflow: auto;
+    }
+}
+
+.widget {
+    .nav-tabs {
+        .nav-link {
+            font-size: .85rem;
+            line-height: 2;
+        }
+    }
+    .dropdown-item {
+        font-size: .85rem;
+        white-space: normal;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        border-left: 1px solid #e3e6f0;
+        border-right: 1px solid #e3e6f0;
+        border-bottom: 1px solid #e3e6f0;
+        line-height: 1.3rem;
+        width: 100%;
+        padding: .25rem 0;
+        clear: both;
+        font-weight: 400;
+        color: #3a3b45;
+        text-align: inherit;
+        background-color: transparent;
+        border: 0;
+        .dropdown-list-image {
+            position: relative;
+            height: 2.5rem;
+            width: 2.5rem;
+            img {
+                height: 2.5rem;
+                width: 2.5rem;
+            }
+        }
+        .text-truncate {
+            max-width: 13.375rem;
+        }
+    }
+}
+
+// AG Grid
+
+.width-adjusted-ag-grid {
+    .ag-center-cols-container,
+    .ag-header-container {
+        width: 100% !important;
+    }
+}
+.ag-theme-alpine {
+    .ag-root-wrapper {
+        border: 0 !important;
+    }
+}
+
+.project-select {
+    .ng-select.ng-select-single {
+        .ng-select-container {
+            background: orange;
+            font-size: 14px;
+            border: 0;
+            .ng-placeholder,
+            .ng-value .ng-value-label,
+            .ng-clear-wrapper {
+                color: $white;
+            }
+            .ng-arrow-wrapper .ng-arrow {
+                border-color: $white transparent transparent;
+            }
+        }
+    }
+}
+
+.bg-pink {
+    background: #e83e8c;
+}
+.bg-purple {
+    background: #6f42c1;
+}
+.bg-gray-medium {
+    background: $gray-600;
+}
+
+.total-progress-text {
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@media (min-width: 768px) {
+    .project-slider .carousel-inner .carousel-item {
+      margin-right: inherit;
+    }
+    .project-slider .carousel-inner .carousel-item.active + .carousel-item,
+    .project-slider .carousel-inner .carousel-item.active + .carousel-item + .carousel-item {
+      display: block;
+    }
+    .project-slider .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+    .project-slider .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+    .project-slider .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+      -webkit-transition: none;
+      transition: none;
+    }
+    .project-slider .carousel-inner .carousel-item.active + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -33.33333333%;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+    .project-slider .carousel-inner .carousel-item-next,
+    .project-slider .carousel-inner .carousel-item-prev {
+      position: relative;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .project-slider .carousel-inner .carousel-item-prev.carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+    }
+    .project-slider .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+    .project-slider .carousel-item-next.carousel-item-left + .carousel-item,
+    .project-slider .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+    .project-slider .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      -webkit-transform: translate3d(-100%, 0, 0);
+              transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+    }
+    .project-slider .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+    .project-slider .carousel-item-prev.carousel-item-right + .carousel-item,
+    .project-slider .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+    .project-slider .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      -webkit-transform: translate3d(100%, 0, 0);
+              transform: translate3d(100%, 0, 0);
+      display: block;
+      visibility: visible;
+    }
+  }
+  
+.carousel-control-prev, .carousel-control-next {
+    width: 6%;
+    opacity: 1;
+}
+.carousel-control-prev {
+    left: -55px;
+}
+.carousel-control-next {
+    right: -55px;
+}
+
+.max-height-for-scroll {
+    max-height: 255px;
+    overflow: auto;
+}

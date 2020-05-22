@@ -1,0 +1,117 @@
+<ul class="navbar-nav sidebar sidebar-dark accordion position-relative" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center py-3" routerLink="/dashboard">
+        <img src="../assets/images/mayan-logo.png" alt="">
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/g-dashboard" routerLinkActive="active">
+            <i class="fas fa-tachometer-alt"></i>
+            <span>Global Dashboard</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/customers" routerLinkActive="active">
+            <i class="fas fa-fw fa-user-circle"></i>
+            <span>Customers</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/projects" routerLinkActive="active">
+            <i class="fas fa-fw fa-briefcase"></i>
+            <span>Projects</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/projects-tasks" routerLinkActive="active">
+            <i class="fas fa-fw fa-tasks"></i>
+            <span>Projects Tasks</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/invoices" routerLinkActive="active">
+            <i class="far fa-fw fa-file-alt"></i>
+            <span>Invoices</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/customer-invoice" routerLinkActive="active">
+            <i class="fas fa-fw fa-user-tag"></i>
+            <span>Customer Invoices</span></a>
+    </li>
+
+    <!-- Divider -->
+    <!-- <hr class="sidebar-divider"> -->
+
+    <!-- Nav Item - Pages Collapse Menu -->
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+            aria-controls="collapseTwo">
+            <i class="fas fa-fw fa-list-alt"></i>
+            <span>Inventory</span>
+        </a>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="text-white pt-2 pb-0 collapse-inner">
+                <a class="collapse-item" routerLink="/inventory/material-list" routerLinkActive="active">Material List</a>
+                <a class="collapse-item" routerLink="/inventory/material-delivery" routerLinkActive="active">Material Delivery</a>
+                <a class="collapse-item" routerLink="/inventory/returns" routerLinkActive="active">Returns</a>
+                <a class="collapse-item" routerLink="/inventory/damaged" routerLinkActive="active">Damaged</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/contractors" routerLinkActive="active">
+            <i class="fas fa-fw fa-user-tie"></i>
+            <span>Contractors</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/inspection" routerLinkActive="active">
+            <i class="fas fa-fw fa-check-square"></i>
+            <span>Inspection</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/customer-survey" routerLinkActive="active">
+            <i class="fas fa-fw fa-user-edit"></i>
+            <span>Customer Survey</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/documents" routerLinkActive="active">
+            <i class="fas fa-fw fa-file"></i>
+            <span>Documents</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#ReportsTab" aria-expanded="true"
+            aria-controls="ReportsTab">
+            <i class="fas fa-fw fa-clipboard-list"></i>
+            <span>Reports</span>
+        </a>
+        <div id="ReportsTab" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+            <div class="text-white pt-2 pb-0 collapse-inner">
+                <a class="collapse-item" routerLink="/reports/audit-reports" routerLinkActive="active">Audit Report</a>
+                <a class="collapse-item" routerLink="/reports/revenue-by-projects" routerLinkActive="active">Revenue By Project</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/settings" routerLinkActive="active">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Settings</span></a>
+    </li>
+
+    <!-- Sidebar Toggler (Sidebar) -->
+    <div class="text-center d-none d-md-inline position-absolute sidebarToggleWrapper">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+    </div>
+
+</ul>
